@@ -1,0 +1,8 @@
+/* Injected as a user stylesheet: only styles Quizzer's "Show in page" highlight. */
+::highlight(quizzer) {
+  background-color: rgba(14, 124, 134, 0.28);
+  color: inherit;
+}
+@media (prefers-color-scheme: dark) {
+  ::highlight(quizzer) { background-color: rgba(79, 195, 204, 0.34); }
+}

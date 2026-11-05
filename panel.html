@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quizzer</title>
+  <script src="js/theme-boot.js"></script>
+  <link rel="stylesheet" href="panel.css" />
+</head>
+<body>
+  <header class="topbar">
+    <button class="icon-btn" id="btn-back" data-icon="chevLeft" title="Back" aria-label="Back" hidden></button>
+    <span class="brand" id="brand"><img src="icons/icon32.png" alt="" /></span>
+    <div class="title-wrap">
+      <span class="crumb" id="crumb"></span>
+      <span class="view-title" id="title">Quizzer</span>
+    </div>
+    <button class="icon-btn" id="btn-settings" data-icon="settings" title="Settings" aria-label="Settings"></button>
+    <div class="menu-anchor">
+      <button class="icon-btn" id="btn-appearance" data-icon="palette" title="Appearance" aria-label="Appearance"></button>
+      <div class="menu appearance" id="appearance-menu" hidden>
+        <div class="menu-label">Mode</div>
+        <div class="seg" id="mode-seg" role="radiogroup" aria-label="Mode">
+          <button data-mode-opt="system" role="radio"><span data-icon="monitor"></span>Auto</button>
+          <button data-mode-opt="light" role="radio"><span data-icon="sun"></span>Light</button>
+          <button data-mode-opt="dark" role="radio"><span data-icon="moon"></span>Dark</button>
+        </div>
+        <div class="menu-label">Color theme</div>
+        <div id="palette-list" role="radiogroup" aria-label="Color theme"></div>
+      </div>
+    </div>
+  </header>
+
+  <div class="rail" id="rail" hidden></div>
+  <main class="view" id="view"></main>
+  <footer class="actionbar" id="actionbar" hidden></footer>
+  <div id="overlay"></div>
+  <div id="live" class="sr-only" aria-live="polite"></div>
+
+  <script type="module" src="js/panel.js"></script>
+</body>
+</html>
